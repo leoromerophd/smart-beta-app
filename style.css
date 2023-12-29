@@ -1,0 +1,9 @@
+/* style.css */
+
+.logo-container img {
+    max-width: 100%;  /* Asegura que la imagen no sea más ancha que el contenedor */
+    height: auto;     /* Mantiene la relación de aspecto de la imagen */
+    margin: 0 auto;   /* Centra la imagen si no usa todo el ancho disponible */
+}
+
+
