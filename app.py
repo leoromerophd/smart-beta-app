@@ -11,6 +11,11 @@ import value
 import growth
 import midcap
 
+st.set_page_config(
+   page_title='Smart-Beta by RyRds.mx',
+   page_icon='./images/favicon-32x32.png'
+)
+
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
