@@ -1,8 +1,31 @@
+# Archivos y carpetas del entorno virtual
+venv/
+env/
+*.pyc
 
+# Archivos de configuración del entorno local
+.config/
+.secret/
 
-Components.csv
-above_average_alpha_list.csv
-above_average_alpha_list.csv
-keys.py
+# Carpetas y archivos de datos (si no deseas incluirlos en tu repositorio)
+data/
+*.csv
+*.xlsx
 
+# Archivos de registro
+*.log
 
+# Carpetas y archivos específicos de IDEs o editores
+.idea/
+*.swp
+*.swo
+.vscode/
+
+# Archivos temporales o de respaldo
+*.tmp
+*.bak
+*.backup
+
+# Archivos generados por el sistema
+.DS_Store
+Thumbs.db
