@@ -18,7 +18,7 @@ ticker = "OEF"
 
 # Función principal para mostrar en Streamlit
 def show():
-    st.title(":classical_building: S&P (Standard & Poors 100)")
+    st.title(":classical_building: S&P (Standard & Poors 100):classical_building:")
     etf_name = "S&P"
     product_number = mapa_nombres_p_numbers.get(etf_name)
     
@@ -47,7 +47,9 @@ def show():
             ticker_value = ticker_value.replace('\r\n', '')
             num_total_datos = count_data_rows(components_info)
 
-            descarga_datos = num_total_datos - 10
+            Dato_Calculo = st.slider('Ingresa el número de componentes para el cálculo', 0, num_total_datos, 15)
+
+            descarga_datos = Dato_Calculo 
             top_15_tickers = filtered_df['Ticker'].head(descarga_datos).tolist()
             top_15_tickers.insert(0, ticker_value)
             # Calcula el peso porcentual y crea una nueva columna para la leyenda
@@ -455,9 +457,6 @@ def show():
             st.write("Error al descargar el archivo CSV.")
     else:
         st.write("Nombre del ETF no encontrado.")
-
-
-
 
 
 if __name__ == "__main__":

@@ -17,7 +17,7 @@ ticker = "IYJ"
 
 # Función principal para mostrar en Streamlit
 def show():
-    st.title(":bank: Financials")
+    st.title(":bank: Financials :bank:")
     etf_name = "Financials"
     product_number = mapa_nombres_p_numbers.get(etf_name)
     
@@ -46,7 +46,9 @@ def show():
             ticker_value = ticker_value.replace('\r\n', '')
             num_total_datos = count_data_rows(components_info)
 
-            descarga_datos = num_total_datos - 10
+            Dato_Calculo = st.slider('Ingresa el número de componentes para el cálculo', 0, num_total_datos, 15)
+
+            descarga_datos = Dato_Calculo
             top_15_tickers = filtered_df['Ticker'].head(descarga_datos).tolist()
             top_15_tickers.insert(0, ticker_value)
 
